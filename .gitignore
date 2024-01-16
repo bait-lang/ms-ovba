@@ -1,3 +1,13 @@
-# Program binaries
-ms-ovba
-ms-ovba.js
+# Ignore binary files without extension
+src
+
+*
+!*/
+!*.*
+
+# Ignore other bineries
+*.exe
+*.js
+
+# Ignore editor files
+*.code-workspace
