@@ -1,0 +1,10 @@
+// SPDX-FileCopyrightText: 2024-present Lukas Neubert <lukas.neubert@proton.me>
+// SPDX-License-Identifier: MPL-2.0
+package msovba
+
+struct State {
+mut:
+	compressed []u8
+	plain []u8
+	pos i32
+}

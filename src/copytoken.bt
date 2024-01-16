@@ -1,0 +1,29 @@
+// SPDX-FileCopyrightText: 2024-present Lukas Neubert <lukas.neubert@proton.me>
+// SPDX-License-Identifier: MPL-2.0
+package msovba
+
+// 2.4.1.3.19.1
+struct CopyTokenHelp {
+mut:
+	length_mask u16
+	offset_mask u16
+	bit_count u16
+	max_length u16
+}
+
+// 2.4.1.3.19.1
+fun copytoken_help(plain_pos i32, plain_chunk_start i32) CopyTokenHelp {
+	mut help := CopyTokenHelp{}
+
+	diff := plain_pos - plain_chunk_start
+	bits := math.ceil(math.log2(diff as f64))
+	help.bit_count = math.max(bits, 4 as f64) as u16
+
+	help.length_mask = 0xFFFF >> help.bit_count
+
+	help.offset_mask = ~help.length_mask
+
+	help.max_length = (0xFFFF >> help.bit_count) + 3
+
+	return help
+}
