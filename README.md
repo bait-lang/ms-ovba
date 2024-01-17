@@ -1,7 +1,6 @@
 # MS-OVBA Compression
-Library implementing the compression algorithms used to strore VBA code inside module streams.
-
-It adheres to section 2.4.1 of the [MS-OVBA specification][msovba-spec] and is based on revision 12.4 (2023-05-16).
+Library implementing the compression and decompression algorithms used to store VBA code inside module streams.
+For details, take a look at section 2.4.1 of the [MS-OVBA specification][msovba-spec] (Revision 12.4, 2023-05-16).
 
 
 ## License

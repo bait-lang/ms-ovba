@@ -1,0 +1,6 @@
+[project]
+name = "msovba"
+version = "0.1.0-dev"
+description = "VBA compression and decompression algorithms defined in MS-OVBA 2.4.1."
+authors = ["Lukas Neubert <lukas.neubert@proton.me>"]
+license = "MPL-2.0"
